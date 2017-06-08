@@ -19,7 +19,10 @@
         <td><%= remediation.created_at.to_formatted_s :long %></td>
         <td><%= remediation.created_by_username %></td>
         <td>
-        <%= link_to raw('<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>'), remediation.spreadsheet.url { |n|  }, class: 'btn btn-default', 'title': 'Download spreadsheet', 'aria-label': 'Download spreadsheet' %> <%= link_to 'Details', remediation, class: 'btn btn-default' %></td>
+        <%= link_to raw('<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>'), remediation.spreadsheet.url { |n|  }, class: 'btn btn-default', 'title': 'Download spreadsheet', 'aria-label': 'Download spreadsheet' %>
+        <%= link_to 'Details', remediation, class: 'btn btn-default' %>
+
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -27,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Remediation', new_remediation_path %>
+<%= link_to 'New Remediation', new_remediation_path, class: 'btn btn-primary' %>

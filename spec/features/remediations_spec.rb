@@ -7,6 +7,7 @@ RSpec.feature "Remediations", type: :feature, js: false do
     expect(page).to have_content 'Not authorized to index remediation'
 
   end
+
   scenario 'User creates a remediation' do
     login_as "testuser", admin: true
     visit '/remediations'
